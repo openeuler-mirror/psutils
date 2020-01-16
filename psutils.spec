@@ -1,14 +1,13 @@
 Name:            psutils
 Version:         1.23
-Release:         15
+Release:         16
 Summary:         utilities for manipulating PostScript documents
 License:         psutils
 URL:             https://github.com/rrthomas/psutils
-
-# wget https://github.com/rrthomas/psutils/archive/master.zip && unzip master.zip && cd psutils-master/
+# wget https://github.com/rrthomas/psutils/archive/v1.23.tar.gz && tar xf v1.23.tar.gz && cd psutils-1.23
 # then run:
-# ./bootstrap && autoreconf -vfi && ./configure && make dist-xz
-Source0:         %{name}-%{version}.tar.xz
+# ./bootstrap && autoreconf -vfi && cd .. &&  tar -cvf psutils-1.23.tar.gz  psutils-1.23 
+Source0:         %{name}-%{version}.tar.gz
 Patch0:          psutils-paperconf.patch
 
 BuildRequires:   gcc perl-generators
